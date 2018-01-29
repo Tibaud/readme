@@ -37,7 +37,8 @@ Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
 Rails étant fait de manière organisée, lorsque le gérant du restaurant fera le site de son restaurant, il entrera la ligne de commande
 
-<section>rails new burger</section>
+  // La première ligne de commande
+  rails new burger
 
 ce qui lui créera le dossier complet d'amorce avec de nombreux dossier dont:
 + controllers (notez qu'il y en a plusieurs en fait, en fonction du plat à faire)
@@ -54,7 +55,7 @@ En effet, si le mec spécialisé en burger commence à se lancer dans la prépar
 
 Vous vous demandez aussi pourquoi il n'y a pas de chef dans cette cuisine. Et bien si en fait. Le serveur, il apporte juste le papier en cuisine. C'est le chef qui annonce la couleur. Dans Rails, le chef ou va l'appeler **route**.
 
-Voici donc l'huile du moteur, le sel de la soupe, les boules du sapin de noël: le fichier **routes.rb**. Il va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
+Le fichier **routes.rb**. Il va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
 
 ## 4 - <a name="bdd"></a>Les Bases de Données
 ## 5 - <a name="getpost"></a>GET / POST
