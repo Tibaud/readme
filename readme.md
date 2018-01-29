@@ -36,10 +36,10 @@ Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 + le _dressage_ s'appelle une **vue (view)**<br>
 
 Rails étant fait de manière organisée, lorsque le gérant du restaurant fera le site de son restaurant, il entrera la ligne de commande
-
+```
   // La première ligne de commande
   rails new burger
-
+```
 ce qui lui créera le dossier complet d'amorce avec de nombreux dossier dont:
 + controllers (notez qu'il y en a plusieurs en fait, en fonction du plat à faire)
 + models (notez qu'il y en a plusieurs pour les mêmes raisons)
