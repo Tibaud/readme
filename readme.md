@@ -23,16 +23,16 @@ Voyons donc maintenant quelques notions techniques utiles concernant Rails.
 MVC, veut dire Model View Controller. Oui. Et même un solide niveau en anglais ne vous permet pas d'en savoir plus. Alors on va décortiquer un peu la bête.
 
 Imaginons que notre user commande un burger au restaurant. Il demande au chef de le lui préparer. Que se passe t'il ensuite ?
-1 - le chef regarde si il a une recette de burger
-1 - le chef prend ensuite les ingrédients dans son frigo et les prépare
-1 - le chef fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
++ - le chef regarde si il a une recette de burger
++ - le chef prend ensuite les ingrédients dans son frigo et les prépare
++ - le chef fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
 
 Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
-1 - votre _commande_ s'appelle une **requête (request)**: elle est envoyée au serveur hébergement le site via votre navigateur
-1 - le _chef_ s'appelle un **contrôleur (controller)**
-1 - la _recette_ est un **modèle (model)** et permet de savoir quoi prendre dans le _frigo_: la **base de données (database ou db)**
-1 - le _dressage_ s'appelle une **vue (view)**
++ votre _commande_ s'appelle une **requête (request)**: elle est envoyée au serveur hébergement le site via votre navigateur<br>
++ le _chef_ s'appelle un **contrôleur (controller)**<br>
++ la _recette_ est un **modèle (model)** et permet de savoir quoi prendre dans le _frigo_: la **base de données (database ou db)**<br>
++ le _dressage_ s'appelle une **vue (view)**<br>
 
 
 ## 3 - <a name="routes"></a>Les routes
