@@ -26,7 +26,7 @@ Voyons donc maintenant quelques notions techniques utiles concernant Rails.
 MVC, veut dire Model View Controller. Oui. Et même un solide niveau en anglais ne vous permet pas d'en savoir plus. Alors on va décortiquer un peu la bête.
 
 Imaginons que notre user commande un burger au restaurant.
-+ vous commandez un burger serveur, qui transmet en cuisine
++ vous commandez un burger au serveur, qui transmet en cuisine
 + le commis regarde si il a une recette de burger
 + le commis prend ensuite les ingrédients dans son frigo et les prépare
 + le commis fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
