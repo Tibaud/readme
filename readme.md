@@ -110,19 +110,6 @@ La carte du restaurant est régulièrement changée, cela implique des changemen
 
 ## 7 - <a name="models"></a>Les relations entre les models des BDD
 
-Vous avez peut être fouillé dans le frigo d'un ami sans pouvoir rien y trouver. Normal, il a organisé son frigo selon ses habitudes ou ses besoins. Même si son rangement est moins bon que le votre (forcement), considérez qu'il a peut être raison. Car il existe plusieurs manières d'organiser une base de données.
-
-Retournons au restaurant, et parlons viande d'autruche. Il y a plusieurs manière de mettre CE steack d'autruche dans la base:
-+ une table viande avec toutes les entrées dont notre steack qui a de nombreux paramètres (animal, partie de l'animal, poids, origine, DLUO ...)
-+ une table viande, plusieurs sous tables (animal, origine, partie de l'animal), et enfin l'entrée qui contiendra des critères dont certains renvoient à d'autres tables
-
-L'organisation de votre base est donc primordiale si vous tenez à maintenir en vie votre serveur.
-
-Je m'explique. Imaginons que vous cherchiez un steack d'autruche de 250 grammes (oui, tu as faim). La première méthode va aller regarder TOUTES les entrées de la table viande. Même celles qui sont du poulet ou de l'agneau. Dans l'autre cas, la requête ne va consulter que les entrées qui appartiennent aux tables viande ET autruche ET steack afin de trouver les morceaux dont le poids est 250 grammes.
-
->La méthode choisie [parmi les nombreuses existantes](https://www.lucidchart.com/pages/fr/quest-ce-quun-mod%C3%A8le-de-base-de-donn%C3%A9es) nécessite une vision claire des objectifs et utilisation du site.
-
-Pour en revenir à Rails, le modèle déterminé par le contrôleur va générer une requête en base, qui sera forcement différente en fonction de la méthode d'organisation de la base.
 
 ## 8 - <a name="crud"></a>Les fonctions du CRUD
 
