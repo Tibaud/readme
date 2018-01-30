@@ -120,7 +120,7 @@ A cet effet, de nombreux outils se concentre sur la validation d'une fonctionnal
 
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
-Un petit schéma en anglais et vous aruez compris le principe de l'importance des modèles dans le monde réel, et pas simplement celui des développeurs:)
+Un petit schéma en anglais et vous aurez compris le principe de l'importance des modèles dans le monde réel, et pas simplement celui des développeurs:)
 ![BDD](https://d2l3jyjp24noqc.cloudfront.net/uploads/image/img/40/bdd-cycle-rails.png)
 
 ## 8 - <a name="crud"></a>Les fonctions du CRUD
