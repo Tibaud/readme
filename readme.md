@@ -120,20 +120,20 @@ A cet effet, de nombreux outils se concentre sur la validation d'une fonctionnal
 
 RSpec, que vous connaissez sûrement avec ruby, rentre dans cette logique:
   ```
->  describe ShoppingCart do
->    context "when first created" do
->      it "is empty" do
->        shopping_cart = ShoppingCart.new
->        expect(shopping_cart).to be_empty
->      end
->    end
->  end
+  describe ShoppingCart do
+    context "when first created" do
+      it "is empty" do
+        shopping_cart = ShoppingCart.new
+        expect(shopping_cart).to be_empty
+      end
+    end
+  end
   ```
 donnera
-  ```
->  ShoppingCart
->    when first created
->      is empty
+```
+  ShoppingCart
+    when first created
+      is empty
       ```
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
