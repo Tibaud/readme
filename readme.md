@@ -31,7 +31,7 @@ Imaginons que notre user commande un burger au restaurant.
 + le commis prend ensuite les ingrédients dans son frigo et les prépare
 + le commis fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
 
-<center>![burger](https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg)</center>
+![burger](https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg)
 
 Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
@@ -57,6 +57,8 @@ Il ne restera plus qu'à créer / remplir les dossier en fonction de la carte, d
 
 Vous vous demandez souvent pourquoi quand le serveur annonce les plats d'une commande il y a toujours un gars qui beugle "OUI CHEF !!!!" en cuisine? C'est à cause de Rails!
 En effet, si le mec spécialisé en burger commence à se lancer dans la préparation des frites à l’assaisonnement du _coleslow_, je vous laisse imaginer le bordel. Donc quand le serveur commande un burger, c'est le commis burger qui beugle. Et personne d'autre. **Et si personne ne répond, pas de burger.** Cruel mais vrai.
+
+![ouichef](https://www.agoravox.fr/local/cache-vignettes/L620xH327/OuiChef_700-05f79-c7282.jpg)
 
 Vous vous demandez aussi pourquoi il n'y a pas de chef dans cette cuisine. Et bien si en fait. Le serveur, il apporte juste le papier en cuisine. C'est le chef qui annonce la couleur. Dans Rails, le chef ou va l'appeler **route**.
 
@@ -114,13 +116,13 @@ Retournons au restaurant, et parlons viande d'autruche. Il y a plusieurs manièr
 + une table viande avec toutes les entrées dont notre steack qui a de nombreux paramètres (animal, partie de l'animal, poids, origine, DLUO ...)
 + une table viande, plusieurs sous tables (animal, origine, partie de l'animal), et enfin l'entrée qui contiendra des critères dont certains renvoient à d'autres tables
 
-Le premier type d'organisation, **orienté objet**, peut faire l'affaire lorsqu'il y a peu de data. Le second, dit **méthode relationnel**, permet d'avoir des recherches beaucoup plus rapides car filtrées.
+L'organisation de votre base est donc primordiale si vous tenez à maintenir en vie votre serveur.
 
-Je m'explique. Imaginons que vous cherchiez un steack d'autruche de 250 grammes (oui, tu as faim). La première méthode va aller regarder TOUTES les entrées de la table viande. Même celles qui sont du poulet ou de l'agneau. Avec une base sur la méthode relationnel, la requête ne va consulter que les entrées qui appartiennent aux tables viande ET autruche ET steack afin de trouver les morceaux dont le poids est 250 grammes.
+Je m'explique. Imaginons que vous cherchiez un steack d'autruche de 250 grammes (oui, tu as faim). La première méthode va aller regarder TOUTES les entrées de la table viande. Même celles qui sont du poulet ou de l'agneau. Dans l'autre cas, la requête ne va consulter que les entrées qui appartiennent aux tables viande ET autruche ET steack afin de trouver les morceaux dont le poids est 250 grammes.
 
->La méthode relationnel est plus complexe à mettre en place, mais bien plus efficace quand on a beaucoup de critères pour une entrée.
+>La méthode choisie [parmi les nombreuses existantes](https://www.lucidchart.com/pages/fr/quest-ce-quun-mod%C3%A8le-de-base-de-donn%C3%A9es) nécessite une vision claire des objectifs et utilisation du site.
 
-Pour en revenir à Rails, le modèle déterminé par le contrôleur va générer une requête en base, qui sera différente en fonction de la méthode d'organisation de la base.
+Pour en revenir à Rails, le modèle déterminé par le contrôleur va générer une requête en base, qui sera forcement différente en fonction de la méthode d'organisation de la base.
 
 ## 8 - <a name="crud"></a>Les fonctions du CRUD
 
