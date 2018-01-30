@@ -118,24 +118,6 @@ Il s'agit en fait d'une méthode visant principalement à ce que les développeu
 
 A cet effet, de nombreux outils se concentre sur la validation d'une fonctionnalité de manière compréhensible et factuelle.
 
-RSpec, que vous connaissez sûrement avec ruby, rentre dans cette logique:
-  ```
-  describe ShoppingCart do
-    context "when first created" do
-      it "is empty" do
-        shopping_cart = ShoppingCart.new
-        expect(shopping_cart).to be_empty
-      end
-    end
-  end
-  ```
-donnera
-  ```
-  ShoppingCart
-    when first created
-   is empty
-      ```
-___
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
 Un petit schéma en anglais et vous aruez compris le principe de l'importance des modèles dans le monde réel, et pas simplement celui des développeurs:)
