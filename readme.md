@@ -17,8 +17,8 @@ Débuter avec Ruby on Rails, ROR pour les intimes, c'est avant tou maîtriser qu
 On ne choisit pas entre un site statique et un site dynamique: on en a besoin ou pas! Mais quelle est la différence me direz vous? Elle est extrêmement simple. Comme son l'indique, le critère statique d'une page vient du fait que son contenu est identique pour tous les internautes.
 
 Les sites statiques ne courent plus les rues, la faute à ses maudits users et leur volonté de personnalisation (ou les besoin de ciblage publicitaires du site). Un site dynamique permet en effet d'adapter le contenu d'une page ou d'un site à chaque profil, en tenant compte de nombreux critères. Ces critères sont principalement collectés par 2 canaux:
-1 - les cookies (qui permettent le suivi statistique, le retargeting publicitaire, l'authentification et plein d'autres choses)
-1 - les bases de données qui contiennent, ô surprise, les données du profil (au choix plein d'infos utiles comme le mail, l'IP, les timestamp de connexion, les préférences propres à chaque site etc...)
++ les cookies (qui permettent le suivi statistique, le retargeting publicitaire, l'authentification et plein d'autres choses)
++ les bases de données qui contiennent, ô surprise, les données du profil (au choix plein d'infos utiles comme le mail, l'IP, les timestamp de connexion, les préférences propres à chaque site etc...)
 
 Voyons donc maintenant quelques notions techniques utiles concernant Rails.
 
