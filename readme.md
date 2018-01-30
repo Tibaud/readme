@@ -130,11 +130,12 @@ RSpec, que vous connaissez sûrement avec ruby, rentre dans cette logique:
   end
   ```
 donnera
-```
+  ```
   ShoppingCart
     when first created
-      is empty
+   is empty
       ```
+___
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
 Un petit schéma en anglais et vous aruez compris le principe de l'importance des modèles dans le monde réel, et pas simplement celui des développeurs:)
