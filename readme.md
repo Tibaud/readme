@@ -83,8 +83,45 @@ Pas cool, car:
 
 Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement
 
-En face, il y a **la méthode POST**. La requête est cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple), sans se confronter à la limite du nombre de caractères de l'URL. Il faut donc être conscient des objectifs avant de choisir l'une ou l'autre.
+En face, il y a **la méthode POST**. La requête est cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple), sans se confronter à la limite du nombre de caractères de l'URL.
+
+Il faut donc être conscient des objectifs avant de choisir l'une ou l'autre.
 
 ## 6 - <a name="migr"></a>Le concept de migration
+
+La carte du restaurant est régulièrement changée, cela implique des changements au niveau des ingrédients, l'intégration de nouveaux produits ou types de produits, répondre à de nouvelles normes... bref **il faut modifier les tables et/ou les entrées**.
+
+Avec Rails, il existe plusieurs commandes pour gérer sa base afin de ne pas y passer des jours (comme c'était le cas il y a 1000 ans avec des sites qui tournaient avec une base access), puis de migrer (faire une **migration**) ces données afin de pouvoir les utiliser.
+
+  ```
+  //easy game la migration:
+  db:migrate
+  ```
+
 ## 7 - <a name="models"></a>Les relations entre les models des BDD
+
+Vous avez peut être fouillé dans le frigo d'un ami sans pouvoir rien y trouver. Normal, il a organisé son frigo selon ses habitudes ou ses besoins. Même si son rangement est moins bon que le votre (forcement), considérez qu'il a peut être raison. Car il existe plusieurs manières d'organiser une base de données.
+
+Retournons au restaurant, et parlons viande d'autruche. Il y a plusieurs manière de mettre CE steack d'autruche dans la base:
++ une table viande avec toutes les entrées dont notre steack qui a de nombreux paramètres (animal, partie de l'animal, poids, origine, DLUO ...)
++ une table viande, plusieurs sous tables (animal, origine, partie de l'animal), et enfin l'entrée qui contiendra des critères dont certains renvoient à d'autres tables
+
+Le premier type d'organisation, orienté objet, peut faire l'affaire lorsqu'il y a peu de data. Le second, dit méthode relationnel, permet d'avoir des recherches beaucoup plus rapides car filtrées.
+
+Je m'explique. Imaginons que vous cherchiez un steack d'autruche de 250 grammes (oui, tu as faim). La première méthode va aller regarder TOUTES les entrées de la table viande. Même celles qui sont du poulet ou de l'agneau. Avec une base sur la méthode relationnel, la requête ne va consulter que les entrées qui appartiennent aux tables viande ET autruche ET steack afin de trouver les morceaux dont le poids est 250 grammes.
+
+La méthode relationnel est plus complexe à mettre en place, mais bien plus efficace.
+
+Pour en revenir à Rails, le modèle déterminé par le contrôleur va générer une requête en base, qui sera différente en fonction de la méthode d'organisation de la base.
+
 ## 8 - <a name="crud"></a>Les fonctions du CRUD
+
+CRUD, pour le coup, c'est parlant même pour les nuls en anglais: cela permet d'intéragir avec la base de données afin d'appliquer les actions suivantes:<br>
+Create pour créer un élément (en utilisant POST)<br>
+Read pour lire un élément (en utilisant GET)<br>
+Update pour mettre à jour (en utilisant PUT)<br>
+Destroy pour le supprimer (en utilisant DELETE)
+
+___
+
+Feel free to share - with love by @TIbaud
