@@ -51,14 +51,40 @@ Il ne restera plus qu'à créer / remplir les dossier en fonction de la carte, d
 ## 3 - <a name="routes"></a>Les routes
 
 Vous vous demandez souvent pourquoi quand le serveur annonce les plats d'une commande il y a toujours un gars qui beugle "OUI CHEF !!!!" en cuisine? C'est à cause de Rails!
-En effet, si le mec spécialisé en burger commence à se lancer dans la préparation des frites à l’assaisonnement du _coleslow_, je vous laisse imaginer le bordel. Donc quand le serveur commande un burger, c'est le commis burger qui beugle. Et personne d'autre. Et si personne ne répond, pas de burger. Cruel mais vrai.
+En effet, si le mec spécialisé en burger commence à se lancer dans la préparation des frites à l’assaisonnement du _coleslow_, je vous laisse imaginer le bordel. Donc quand le serveur commande un burger, c'est le commis burger qui beugle. Et personne d'autre. **Et si personne ne répond, pas de burger.** Cruel mais vrai.
 
 Vous vous demandez aussi pourquoi il n'y a pas de chef dans cette cuisine. Et bien si en fait. Le serveur, il apporte juste le papier en cuisine. C'est le chef qui annonce la couleur. Dans Rails, le chef ou va l'appeler **route**.
 
-Le fichier **routes.rb**. Il va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
+Le fichier **/config/routes.rb** va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
 
 ## 4 - <a name="bdd"></a>Les Bases de Données
+
+Retour dans la cuisine. Vous imaginez bien qu'il y a un nombre important de recettes, il s'agit donc d'être bien organisé. Du coup, quand vous demandez un plat, le chef va juste savoir si c'est plutôt _de la viande_ ou _du poisson_, et désigne le contrôleur concerné. Ce dernier va tout faire pour assurer (car il n'aime pas les erreur le chef), et va donc prendre les ingrédients exacts qui correspondent à la recette dans le frigo, avant de réaliser le plat comme indiqué, ni plus ni moins.
+
+Autant dire que le frigo est organisé rigoureusement: le rayon viande, le sous rayon bœuf, le sous-sous rayon côte de bœuf, les côtes de bœuf avec leur poids et leur origine. Pareil pour les poissons, les légumes ...
+
+Imaginez un peu classeur excel qui se mange (sisi, imaginez, c'est top): celà s'appelle une **base de données (database ou db)**. Les différents rayons s'appellent des **tables** et les produits en bout de chaîne des **entrées**, chaque entrée ayant un **identifiant unique**.
+
+La base de données peut être plus compliquée à gérer que votre frigo, car les tables peuvent être liées en elles, et les requêtes très complexe à organiser. La bonne préparation de la structure d'une base de données à de grande répercutions sur les performances d'affichage d'un site et doit être considérée comme prioritaire dans la conception d'un site. **Car si la côte de bœuf arrive froide, le client ira manger ailleurs**.
 ## 5 - <a name="getpost"></a>GET / POST
+Même si ce n'est pas simple, on va tenter de rester dans la restauration. Le serveur revient avec votre plat et vous dit:
+
+voici votre burger avec du pain, du steack, de la raclette, des cornichons, du ketchup ...
+
+Pas cool, car:
++ vous n'êtes pas aveugle
++ votre viande est en train de refroidir pendant cet inventaire
+
+**Ça c'est la méthode GET**, ça se faisait déjà de moins en moins quand tout le monde disait que Google ça ne marcherait pas car il n'y avait pas de photo sur la page d'accueil. Cela consiste à passer des paramètres dans l'URL, et donc visible par tous,y compris les moteurs de recherche, et, pour le référencement, c'est mal quand ça ressemble à ça:
+
+[http://maisonduburger.com/burger.html?recette=pain&steack&raclette&cornichons&ketchup&cuisson=biencuit](#)
+
+**Indigeste!** pas seulement le ketchup avec la raclette, mais visuellement c'est moche, ça ouvre la porte au scraping aisé de votre site par des spammeurs, et en référencement c'est de la daube (je vous prépare un atelier à ce sujet)
+
+Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement
+
+En face, il y a **la méthode POST**. La requête est cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple), sans se confronter à la limite du nombre de caractères de l'URL. Il faut donc être conscient des objectifs avant de choisir l'une ou l'autre.
+
 ## 6 - <a name="migr"></a>Le concept de migration
 ## 7 - <a name="models"></a>Les relations entre les models des BDD
 ## 8 - <a name="crud"></a>Les fonctions du CRUD
