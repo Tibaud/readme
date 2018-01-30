@@ -42,8 +42,8 @@ Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
 Rails étant fait de manière organisée, lorsque le gérant du restaurant fera le site de son restaurant, il entrera la ligne de commande
 ```
-  // La première ligne de commande
-  rails new burger
+>  // La première ligne de commande
+>  rails new burger
 ```
 ce qui lui créera le dossier complet d'amorce avec de nombreux dossier dont:
 + controllers (notez qu'il y en a plusieurs en fait, en fonction du plat à faire)
@@ -77,23 +77,25 @@ La base de données peut être plus compliquée à gérer que votre frigo, car l
 ## 5 - <a name="getpost"></a>GET / POST
 Même si ce n'est pas simple, on va tenter de rester dans la restauration. Le serveur revient avec votre plat et vous dit:
 
-voici votre burger avec du pain, du steack, de la raclette, des cornichons, du ketchup ...
+Voici votre burger avec du pain, du steack, de la raclette, des cornichons, du ketchup ...
 
 Pas cool, car:
 + vous n'êtes pas aveugle
 + votre viande est en train de refroidir pendant cet inventaire
 
-**Ça c'est la méthode GET**, ça se faisait déjà de moins en moins quand tout le monde disait que Google ça ne marcherait pas car il n'y avait pas de photo sur la page d'accueil. Cela consiste à passer des paramètres dans l'URL, et donc visible par tous,y compris les moteurs de recherche, et, pour le référencement, c'est mal quand ça ressemble à ça:
+**Ça c'est la méthode GET sale**, ça se faisait déjà de moins en moins quand tout le monde disait que Google ça ne marcherait pas car il n'y avait pas de photo sur la page d'accueil. Cela consiste à passer des paramètres dans l'URL, et donc visible par tous,y compris les moteurs de recherche, et, pour le référencement, c'est mal quand ça ressemble à ça:
 
 [http://maisonduburger.com/burger.html?recette=pain&steack&raclette&cornichons&ketchup&cuisson=biencuit](#)
 
-**Indigeste!** pas seulement le ketchup avec la raclette, mais visuellement c'est moche, ça ouvre la porte au scraping aisé de votre site par des spammeurs, et en référencement c'est de la daube (je vous prépare un atelier à ce sujet)
+**Indigeste!** pas seulement le ketchup avec la raclette, mais visuellement c'est moche, ça ouvre la porte au scraping aisé de votre site par des spammeurs, et en référencement c'est de la daube (je vous prépare un atelier à ce sujet).
+
+>Si la méthode est utile pour certaines choses, comme dans les formulaires, il faut l'utiliser à bon escient, en tout cas pas lorsque l'on passe des données sensibles au serveur.
 
 ![google](https://pakwired.com/wp-content/uploads/2014/09/google-facts-04.jpg?x47252)
 
-Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement
+Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement.
 
-En face, il y a **la méthode POST**. La requête est cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple), sans se confronter à la limite du nombre de caractères de l'URL.
+En face, il y a **la méthode POST**. La requête est fois cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple, transmission de données sensibles), sans se confronter à la limite du nombre de caractères de l'URL.
 
 >Il faut donc être conscient des objectifs avant de choisir GET ou POST.
 
@@ -104,8 +106,8 @@ La carte du restaurant est régulièrement changée, cela implique des changemen
 >Avec Rails, il existe plusieurs commandes pour gérer sa base afin de ne pas y passer des jours (comme c'était le cas il y a 1000 ans avec des sites qui tournaient avec une base access), puis de migrer (faire une **migration**) ces données afin de pouvoir les utiliser.
 
   ```
-  //easy game la migration:
-  db:migrate
+>  //easy game la migration:
+>  db:migrate
   ```
 
 ## 7 - <a name="models"></a>Les relations entre les models des BDD
@@ -118,20 +120,20 @@ A cet effet, de nombreux outils se concentre sur la validation d'une fonctionnal
 
 RSpec, que vous connaissez sûrement avec ruby, rentre dans cette logique:
   ```
-  describe ShoppingCart do
-    context "when first created" do
-      it "is empty" do
-        shopping_cart = ShoppingCart.new
-        expect(shopping_cart).to be_empty
-      end
-    end
-  end
+>  describe ShoppingCart do
+>    context "when first created" do
+>      it "is empty" do
+>        shopping_cart = ShoppingCart.new
+>        expect(shopping_cart).to be_empty
+>      end
+>    end
+>  end
   ```
 donnera
   ```
-  ShoppingCart
-    when first created
-      is empty
+>  ShoppingCart
+>    when first created
+>      is empty
       ```
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
