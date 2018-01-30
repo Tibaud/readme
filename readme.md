@@ -31,7 +31,7 @@ Imaginons que notre user commande un burger au restaurant.
 + le commis prend ensuite les ingrédients dans son frigo et les prépare
 + le commis fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
 
-![burger](https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg)
+<center>![burger](https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg)</center>
 
 Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
