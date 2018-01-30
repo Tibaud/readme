@@ -1,6 +1,6 @@
 # Principes de base Ruby on Rails
 
-![Minion](http://octodex.github.com/images/minion.png)
+![Ruby](http://atelier-agile.ch/ruby-on-rails-logo.png)
 
 Débuter avec Ruby on Rails, ROR pour les intimes, c'est avant tou maîtriser quelques concepts de bases en plus de Ruby. Voici quelques informations qui te seront utiles avec de te lancer tes premiers sites sur des rails.<br><br>
 
@@ -30,6 +30,8 @@ Imaginons que notre user commande un burger au restaurant.
 + le commis regarde si il a une recette de burger
 + le commis prend ensuite les ingrédients dans son frigo et les prépare
 + le commis fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
+
+![burger]https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg
 
 Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
@@ -69,6 +71,7 @@ Autant dire que le frigo est organisé rigoureusement: le rayon viande, le sous 
 Imaginez un peu classeur excel qui se mange (sisi, imaginez, c'est top): celà s'appelle une **base de données (database ou db)**. Les différents rayons s'appellent des **tables** et les produits en bout de chaîne des **entrées**, chaque entrée ayant un **identifiant unique**.
 
 La base de données peut être plus compliquée à gérer que votre frigo, car les tables peuvent être liées en elles, et les requêtes très complexe à organiser. La bonne préparation de la structure d'une base de données à de grande répercutions sur les performances d'affichage d'un site et doit être considérée comme prioritaire dans la conception d'un site. **Car si la côte de bœuf arrive froide, le client ira manger ailleurs**.
+
 ## 5 - <a name="getpost"></a>GET / POST
 Même si ce n'est pas simple, on va tenter de rester dans la restauration. Le serveur revient avec votre plat et vous dit:
 
@@ -83,6 +86,8 @@ Pas cool, car:
 [http://maisonduburger.com/burger.html?recette=pain&steack&raclette&cornichons&ketchup&cuisson=biencuit](#)
 
 **Indigeste!** pas seulement le ketchup avec la raclette, mais visuellement c'est moche, ça ouvre la porte au scraping aisé de votre site par des spammeurs, et en référencement c'est de la daube (je vous prépare un atelier à ce sujet)
+
+![google]https://pakwired.com/wp-content/uploads/2014/09/google-facts-04.jpg?x47252
 
 Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement
 
