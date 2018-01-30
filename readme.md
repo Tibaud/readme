@@ -116,7 +116,7 @@ Si on sait maintenant ce qu'est un modèle, quid des BDD? Un petit coup de Googl
 
 Il s'agit en fait d'une méthode visant principalement à ce que les développeurs soient focus sur les raisons pour lesquelles ils développent. Le BDD permet d'inclure dans la boucle de reflexion et de suivi des personnes qui ne sont pas du tout dev, des responsables qualités ...
 
-A cet effet, de nombreux outils se concentre sur la validation d'une fonctionnalité de manière compréhensible et factuelle.
+A cet effet, de nombreux outils se concentrent sur la validation d'une fonctionnalité de manière compréhensible et factuelle, come Rspec.
 
 Si l'on revient au restaurant, cela permet au chef de créer de nouveaux plats et de les faire tester à des gens qui ne savent pas faire cuire un oeuf, mais dire si c'est bon.
 
