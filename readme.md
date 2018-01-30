@@ -31,7 +31,7 @@ Imaginons que notre user commande un burger au restaurant.
 + le commis prend ensuite les ingrédients dans son frigo et les prépare
 + le commis fait enfin le dressage afin de vous présenter le plat "comme sur la photo"
 
-![burger]https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg
+![burger](https://assets-cdn.mrhyde.com/app/uploads/2016/07/19144315/win-a-burger-party-at-honest-burgers-5-256x256.jpg)
 
 Mettons maintenant les noms officiels sur ces étapes (avec leur traduction):
 
@@ -87,7 +87,7 @@ Pas cool, car:
 
 **Indigeste!** pas seulement le ketchup avec la raclette, mais visuellement c'est moche, ça ouvre la porte au scraping aisé de votre site par des spammeurs, et en référencement c'est de la daube (je vous prépare un atelier à ce sujet)
 
-![google]https://pakwired.com/wp-content/uploads/2014/09/google-facts-04.jpg?x47252
+![google](https://pakwired.com/wp-content/uploads/2014/09/google-facts-04.jpg?x47252)
 
 Bon attention, la méthode GET a cependant certains intérêts, et principalement le fait de pouvoir être mise en cache, et, avec un peu d'URL rewriting, on retombe sur nos pieds côté référencement
 
