@@ -1,5 +1,7 @@
 # Principes de base Ruby on Rails
 
+![Minion](http://octodex.github.com/images/minion.png)
+
 Débuter avec Ruby on Rails, ROR pour les intimes, c'est avant tou maîtriser quelques concepts de bases en plus de Ruby. Voici quelques informations qui te seront utiles avec de te lancer tes premiers sites sur des rails.<br><br>
 
 1 - [Site statique ou site dynamique ?](#dyna)<br>
@@ -19,6 +21,7 @@ Les sites statiques ne courent plus les rues, la faute à ses maudits users et l
 1 - les bases de données qui contiennent, ô surprise, les données du profil (au choix plein d'infos utiles comme le mail, l'IP, les timestamp de connexion, les préférences propres à chaque site etc...)
 
 Voyons donc maintenant quelques notions techniques utiles concernant Rails.
+
 ## 2 - <a name="mvc"></a>Le MVC
 MVC, veut dire Model View Controller. Oui. Et même un solide niveau en anglais ne vous permet pas d'en savoir plus. Alors on va décortiquer un peu la bête.
 
@@ -55,7 +58,7 @@ En effet, si le mec spécialisé en burger commence à se lancer dans la prépar
 
 Vous vous demandez aussi pourquoi il n'y a pas de chef dans cette cuisine. Et bien si en fait. Le serveur, il apporte juste le papier en cuisine. C'est le chef qui annonce la couleur. Dans Rails, le chef ou va l'appeler **route**.
 
-Le fichier **/config/routes.rb** va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
+>Le fichier **/config/routes.rb** va interpréter les URL et déterminer quel contrôleur va traiter la demande. Dans les grands restaurants, il peut même charger un contrôleur de la préparation de la viande, un autre de la cuisson etc...
 
 ## 4 - <a name="bdd"></a>Les Bases de Données
 
@@ -85,13 +88,13 @@ Bon attention, la méthode GET a cependant certains intérêts, et principalemen
 
 En face, il y a **la méthode POST**. La requête est cette enregistrée et envoyée à la base de donnée, et les paramètres sont dans le body. On peut donc interagir avec la base de données (mise à jour de données par exemple), sans se confronter à la limite du nombre de caractères de l'URL.
 
-Il faut donc être conscient des objectifs avant de choisir l'une ou l'autre.
+>Il faut donc être conscient des objectifs avant de choisir GET ou POST.
 
 ## 6 - <a name="migr"></a>Le concept de migration
 
 La carte du restaurant est régulièrement changée, cela implique des changements au niveau des ingrédients, l'intégration de nouveaux produits ou types de produits, répondre à de nouvelles normes... bref **il faut modifier les tables et/ou les entrées**.
 
-Avec Rails, il existe plusieurs commandes pour gérer sa base afin de ne pas y passer des jours (comme c'était le cas il y a 1000 ans avec des sites qui tournaient avec une base access), puis de migrer (faire une **migration**) ces données afin de pouvoir les utiliser.
+>Avec Rails, il existe plusieurs commandes pour gérer sa base afin de ne pas y passer des jours (comme c'était le cas il y a 1000 ans avec des sites qui tournaient avec une base access), puis de migrer (faire une **migration**) ces données afin de pouvoir les utiliser.
 
   ```
   //easy game la migration:
@@ -106,11 +109,11 @@ Retournons au restaurant, et parlons viande d'autruche. Il y a plusieurs manièr
 + une table viande avec toutes les entrées dont notre steack qui a de nombreux paramètres (animal, partie de l'animal, poids, origine, DLUO ...)
 + une table viande, plusieurs sous tables (animal, origine, partie de l'animal), et enfin l'entrée qui contiendra des critères dont certains renvoient à d'autres tables
 
-Le premier type d'organisation, orienté objet, peut faire l'affaire lorsqu'il y a peu de data. Le second, dit méthode relationnel, permet d'avoir des recherches beaucoup plus rapides car filtrées.
+Le premier type d'organisation, **orienté objet**, peut faire l'affaire lorsqu'il y a peu de data. Le second, dit **méthode relationnel**, permet d'avoir des recherches beaucoup plus rapides car filtrées.
 
 Je m'explique. Imaginons que vous cherchiez un steack d'autruche de 250 grammes (oui, tu as faim). La première méthode va aller regarder TOUTES les entrées de la table viande. Même celles qui sont du poulet ou de l'agneau. Avec une base sur la méthode relationnel, la requête ne va consulter que les entrées qui appartiennent aux tables viande ET autruche ET steack afin de trouver les morceaux dont le poids est 250 grammes.
 
-La méthode relationnel est plus complexe à mettre en place, mais bien plus efficace.
+>La méthode relationnel est plus complexe à mettre en place, mais bien plus efficace quand on a beaucoup de critères pour une entrée.
 
 Pour en revenir à Rails, le modèle déterminé par le contrôleur va générer une requête en base, qui sera différente en fonction de la méthode d'organisation de la base.
 
